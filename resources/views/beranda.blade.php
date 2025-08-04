@@ -91,29 +91,44 @@
             </div>
         </div>
     </div>
-    <div class="pt-4 pb-4 text-center">
-        <div class="display-6">Buku Terbaru</div>
-        <div id="carouselExample" class="carousel slide">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
+    <div class="container pt-4 pb-4 text-center">
+        <div class="display-6 mb-3">Buku Terbaru</div>
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/buku1.jpg" class="card-img-top" alt="..." style="height: 400px;">
+                    <div class="card-body">
+                        <div class="card-text text-start">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</div>
+                    </div>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/buku2.jpg" class="card-img-top" alt="..." style="height: 400px;">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/buku3.jpg" class="card-img-top" alt="..." style="height: 400px;">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center align-items-center">
+                <a href="/buku" style="text-decoration: none; color: #007bff;">Lainnya &rarr;</a>
+            </div>
+        </div>
+    </div>
+    <div class="bg-primary pt-4 pb-4">
+        <div class="container text-center text-light">
+            <div class="fs-4">&copy; 14, Dava Ari Ardiansyah | XII RPL-1</div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
