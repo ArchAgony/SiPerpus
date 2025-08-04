@@ -7,20 +7,87 @@
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.css" />
 </head>
 
 <body>
     @include('navbar')
     <div class="container text-center pt-2 pb-2">
-        <div class="display-5 mb-2">Lokasi Perpustakaan</div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1975.0667747124776!2d112.315629888368!3d-8.08786034245207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7893ebbab3e161%3A0xa8678f8ba8253eb4!2sSMK%20PGRI%20Wlingi!5e0!3m2!1sid!2sid!4v1754274177538!5m2!1sid!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="display-5 mb-2">Lokasi Rak Buku</div>
+        <div class="card">
+            <div class="card-header text-start">
+                Pembagian Rak
+            </div>
+            <div class="container">
+
+                <table id="example" class="display text-start">
+                    <thead>
+                        <tr>
+                            <th>No.</th>
+                            <th>Rak</th>
+                            <th>Kategori</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1.</td>
+                            <td>Rak A</td>
+                            <td>Filsafat</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-warning">Ubah</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger">Hapus</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td>Rak B</td>
+                            <td>Novel</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-warning">Ubah</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger">Hapus</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td>Rak C</td>
+                            <td>Sandiwara</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <button type="button" class="btn btn-warning">Ubah</button>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger">Hapus</button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
     @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdn.datatables.net/2.3.2/js/dataTables.js"></script>
+    <script>
+        new DataTable('#example');
     </script>
 </body>
 

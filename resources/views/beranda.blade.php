@@ -77,9 +77,9 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/buku1.jpg" class="card-img-top" alt="..." style="height: 400px;">
                     <div class="card-body">
-                        <div class="card-text text-start">Some quick example text to build on the card title and make up
-                            the bulk of
-                            the card’s content.</div>
+                        <div class="card-text text-start">
+                            
+                        </div>
                     </div>
                 </div>
             </div>
