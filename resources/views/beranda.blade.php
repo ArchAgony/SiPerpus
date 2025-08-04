@@ -12,28 +12,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
-        <div class="container">
-            <a class="navbar-brand" href="/">SiPerpus</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Beranda</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/lokasi">Lokasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/buku">Buku</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @include('navbar')
     <div class="container">
         <div class="row">
             <div class="col d-flex justify-content-center align-items-center">
@@ -98,7 +77,8 @@
                 <div class="card" style="width: 18rem;">
                     <img src="images/buku1.jpg" class="card-img-top" alt="..." style="height: 400px;">
                     <div class="card-body">
-                        <div class="card-text text-start">Some quick example text to build on the card title and make up the bulk of
+                        <div class="card-text text-start">Some quick example text to build on the card title and make up
+                            the bulk of
                             the card’s content.</div>
                     </div>
                 </div>
@@ -126,11 +106,7 @@
             </div>
         </div>
     </div>
-    <div class="bg-primary pt-4 pb-4">
-        <div class="container text-center text-light">
-            <div class="fs-4">&copy; 14, Dava Ari Ardiansyah | XII RPL-1</div>
-        </div>
-    </div>
+    @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
     </script>

@@ -10,15 +10,11 @@
 </head>
 
 <body>
-    @include('navbar')
-    <div class="container text-center pt-2 pb-2">
-        <div class="display-5 mb-2">Lokasi Perpustakaan</div>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1975.0667747124776!2d112.315629888368!3d-8.08786034245207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7893ebbab3e161%3A0xa8678f8ba8253eb4!2sSMK%20PGRI%20Wlingi!5e0!3m2!1sid!2sid!4v1754274177538!5m2!1sid!2sid"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="bg-primary pt-3 pb-3">
+        <div class="container text-center text-light">
+            <div class="fs-4">&copy; 14, Dava Ari Ardiansyah | XII RPL-1</div>
+        </div>
     </div>
-    @include('footer')
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous">
     </script>
