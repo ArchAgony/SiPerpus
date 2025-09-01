@@ -16,85 +16,73 @@
                 <thead>
                     <tr>
                         <th>No.</th>
-                        <th>Kode buku</th>
-                        <th>Judul buku</th>
-                        <th>Kategori</th>
                         <th>Lokasi</th>
+                        <th>Deskripsi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>1.</td>
-                        <td>17100</td>
-                        <td>The Metamorphosis</td>
-                        <td>Filsafat</td>
-                        <td>Rak A</td>
-                        <td>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="/lokasi/edit"><button type="button" class="btn btn-warning"><i
-                                                class="fas fa-file"></i> Ubah</button></a>
+                    @foreach ($lokasi as $key => $item)
+                        <tr>
+                            <td>{{ $key + 1 }}</td>
+                            <td>{{ $item->lokasi }}</td>
+                            <td>{{ $item->deskripsi }}</td>
+                            <td>
+                                <div class="row">
+                                    <div class="col">
+                                        <a href="/lokasi/edit/{{ $item->id }}">
+                                            <button type="button" class="btn btn-warning"><i class="fas fa-file"></i>
+                                                Ubah</button>
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal{{ $item->id }}">
+                                            Hapus
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash"
-                                            onclick="showAlert()"></i> Hapus</button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2.</td>
-                        <td>17101</td>
-                        <td>The Will of Power</td>
-                        <td>Novel</td>
-                        <td>Rak B</td>
-                        <td>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="/lokasi/edit"><button type="button" class="btn btn-warning"><i
-                                                class="fas fa-file"></i> Ubah</button></a>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i>
-                                        Hapus</button>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3.</td>
-                        <td>17102</td>
-                        <td>Mein Kampf</td>
-                        <td>Autobiografi</td>
-                        <td>Rak C</td>
-                        <td>
-                            <div class="row">
-                                <div class="col">
-                                    <a href="/lokasi/edit"><button type="button" class="btn btn-warning"><i
-                                                class="fas fa-file"></i> Ubah</button></a>
-                                </div>
-                                <div class="col">
-                                    <button type="button" class="btn btn-danger"><i class="fas fa-trash"></i>
-                                        Hapus</button>
+                            </td>
+                        </tr>
+
+                        <!-- Modal Hapus untuk item ini -->
+                        <div class="modal fade" id="deleteModal{{ $item->id }}" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">Hapus data</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Yakin ingin menghapus data <strong>{{ $item->lokasi }}</strong>?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-success"
+                                            data-bs-dismiss="modal">Kembali</button>
+                                        <a href="/lokasi/delete/{{ $item->id }}">
+                                            <button type="button" class="btn btn-danger">Hapus</button>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </td>
-                    </tr>
+                        </div>
+                    @endforeach
                 </tbody>
             </table>
         </div>
 
         @push('scripts')
-        <script>
-            function showAlert() {
-                Swal.fire({
-                    title: 'Halo!',
-                    text: 'Ini adalah pop-up dari SweetAlert2.',
-                    icon: 'success',
-                    confirmButtonText: 'OK'
-                });
-            }
-        </script>
+            <script>
+                function showAlert() {
+                    Swal.fire({
+                        title: 'Halo!',
+                        text: 'Ini adalah pop-up dari SweetAlert2.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            </script>
         @endpush
     @endsection

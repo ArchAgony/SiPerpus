@@ -23,24 +23,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="mt-3">Kode buku</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Kode..." aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="mt-1">Judul buku</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Judul..." aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="mt-1">kategori</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Kategori..." aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="mt-1">Lokasi</div>
+                <div class="mt-3">Lokasi</div>
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Lokasi..." aria-label="Username"
+                        aria-describedby="basic-addon1">
+                </div>
+                <div class="mt-1">Deskripsi</div>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Deskripsi..." aria-label="Username"
                         aria-describedby="basic-addon1">
                 </div>
             </div>

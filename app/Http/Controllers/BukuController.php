@@ -1,19 +1,21 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Lokasi;
+
+use App\Models\Buku;
 use Illuminate\Http\Request;
 
-class LokasiController extends Controller
+class BukuController extends Controller
 {
-    // function untuk menampilkan view halaman utama dari menu lokasi
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        // memanggil atau mengambil seluruh data dari tb_lokasi
-        $lokasi = Lokasi::all();
+        //
+        $buku = Buku::all();
 
-        // melakukan parsing data ke view index
-        return view('lokasi/index', ['lokasi' => $lokasi]);
+        return view('buku.index', ['buku' => $buku]);
     }
 
     /**
@@ -21,7 +23,8 @@ class LokasiController extends Controller
      */
     public function create()
     {
-        return view('lokasi/create');
+        //
+        return view('buku.create');
     }
 
     /**
@@ -43,10 +46,10 @@ class LokasiController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    // public function edit(string $id)
     public function edit()
     {
-        return view('lokasi/edit');
+        //
+        return view('buku.edit');
     }
 
     /**
@@ -62,7 +65,6 @@ class LokasiController extends Controller
      */
     public function destroy(string $id)
     {
-        $deleted = Lokasi::where('id', $id)->delete();
-        return redirect('/lokasi');
+        //
     }
 }
