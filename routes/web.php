@@ -18,6 +18,7 @@ Route::get('/lokasi/delete/{id}', [LokasiController::class, 'destroy']);
 Route::get('/buku', [BukuController::class, 'index']);
 Route::get('/buku/create', [BukuController::class, 'create']);
 Route::get('/buku/edit', [BukuController::class, 'edit']);
+Route::get('/buku/delete/{id}', [BukuController::class, 'destroy']);
 
 // Route::get('/buku', function () {
 //     return view('buku');

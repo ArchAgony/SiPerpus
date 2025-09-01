@@ -66,5 +66,7 @@ class BukuController extends Controller
     public function destroy(string $id)
     {
         //
+        $deleted = Buku::where('id', $id)->delete();
+        return redirect('/buku');
     }
 }
