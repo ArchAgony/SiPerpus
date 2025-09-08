@@ -3,16 +3,7 @@
     <div class="container mt-3 mb-3">
         <div class="card-body">
             <table id="datatablesSimple" class="stripe">
-                <div class="row">
-                    <div class="col">
-                        <h1>Buku</h1>
-                    </div>
-                    <div class="col">
-                        <div class="text-end mb-3">
-                            <a href="/buku/create"><button type="button" class="btn btn-success">Tambah</button></a>
-                        </div>
-                    </div>
-                </div>
+                <h1>Penyimpanan</h1>
                 <thead>
                     <tr>
                         <th>No.</th>
@@ -20,7 +11,6 @@
                         <th>Pengarang</th>
                         <th>Penerbit</th>
                         <th>Tahun terbit</th>
-                        <th>Keterangan</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -32,13 +22,6 @@
                             <td>{{ $item->pengarang }}</td>
                             <td>{{ $item->penerbit }}</td>
                             <td>{{ $item->tahun_terbit }}</td>
-                            <td>
-                                @if (!empty($item->lokasi))
-                                    {{ $item->lokasi }}
-                                @else
-                                    tidak ada data
-                                @endif
-                            </td>
                             <td>
                                 <div class="row">
                                     <div class="col">

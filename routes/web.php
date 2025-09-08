@@ -4,6 +4,7 @@ use App\Http\Controllers\BukuController;
 use Illuminate\Support\Facades\Route;
 // memanggil controller LokasiController
 use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\PenyimpananController;
 
 Route::get('/', function () {
     return view('beranda');
@@ -24,6 +25,7 @@ Route::get('/buku/edit/{id}', [BukuController::class, 'edit']);
 Route::post('/buku/update/{id}', [BukuController::class, 'update']);
 Route::get('/buku/delete/{id}', [BukuController::class, 'destroy']);
 
+Route::get('/penyimpanan', [PenyimpananController::class, 'index']);
 // Route::get('/buku', function () {
 //     return view('buku');
 // });

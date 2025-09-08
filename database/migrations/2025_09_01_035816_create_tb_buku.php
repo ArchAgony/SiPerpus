@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('pengarang');
             $table->string('penerbit');
             $table->integer('tahun_terbit');
+            // $table->foreignId('id_lokasi')->constrained('tb_lokasi')->nullable();
+            $table->integer('id_lokasi')->nullable();
         });
     }
 

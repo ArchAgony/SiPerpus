@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         // ]);
 
         $this->call([
+            LokasiSeeder::class,
             BukuSeeder::class,
-            LokasiSeeder::class
         ]);
     }
 }

@@ -63,6 +63,10 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-book"></i></div>
                             Buku
                         </a>
+                        <a class="nav-link" href="/penyimpanan">
+                            <div class="sb-nav-link-icon"><i class="fas fa-box"></i></div>
+                            Penyimpanan
+                        </a>
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">

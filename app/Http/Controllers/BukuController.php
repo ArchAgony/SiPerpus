@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Buku;
+use App\Models\Lokasi;
 use Illuminate\Http\Request;
 
 class BukuController extends Controller
@@ -24,7 +25,8 @@ class BukuController extends Controller
     public function create()
     {
         //
-        return view('buku.create');
+        $lokasi = Lokasi::all();
+        return view('buku.create', ['lokasi' => $lokasi]);
     }
 
     /**
@@ -38,6 +40,7 @@ class BukuController extends Controller
             'pengarang' => $request->pengarang,
             'penerbit' => $request->penerbit,
             'tahun_terbit' => $request->tahun,
+            'id_lokasi' => $request->lokasi,
         ]);
         return redirect('/buku');
     }
