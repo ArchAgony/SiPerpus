@@ -8,4 +8,7 @@ class Lokasi extends Model
 {
     //
     protected $table = 'tb_lokasi';
+    protected $guarded = ['id'];
+
+    public $timestamps = false;
 }

@@ -30,6 +30,12 @@ class LokasiController extends Controller
     public function store(Request $request)
     {
         //
+        Lokasi::create([
+            'lokasi' => $request->lokasi,
+            'deskripsi' => $request->deskripsi
+        ]);
+
+        return redirect('/lokasi');
     }
 
     /**
@@ -44,9 +50,11 @@ class LokasiController extends Controller
      * Show the form for editing the specified resource.
      */
     // public function edit(string $id)
-    public function edit()
+    public function edit(string $id)
     {
-        return view('lokasi/edit');
+        $lokasi = Lokasi::findOrFail($id);
+
+        return view('lokasi/edit', compact('lokasi'));
     }
 
     /**
@@ -55,6 +63,12 @@ class LokasiController extends Controller
     public function update(Request $request, string $id)
     {
         //
+        $lokasi = Lokasi::find($id);
+
+        $lokasi->lokasi = $request->lokasi;
+        $lokasi->deskripsi = $request->deskripsi;
+        $lokasi->save();
+        return redirect('/lokasi');
     }
 
     /**

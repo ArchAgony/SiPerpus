@@ -8,4 +8,7 @@ class Buku extends Model
 {
     //
     protected $table = 'tb_buku';
+    protected $guarded = ['id'];
+
+    public $timestamps = false;
 }

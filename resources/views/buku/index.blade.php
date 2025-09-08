@@ -34,7 +34,7 @@
                             <td>
                                 <div class="row">
                                     <div class="col">
-                                        <a href="/buku/edit"><button type="button" class="btn btn-warning"><i
+                                        <a href="/buku/edit/{{ $item->id }}"><button type="button" class="btn btn-warning"><i
                                                     class="fas fa-file"></i> Ubah</button></a>
                                     </div>
                                     <div class="col">
@@ -73,17 +73,4 @@
                 </tbody>
             </table>
         </div>
-
-        @push('scripts')
-            <script>
-                function showAlert() {
-                    Swal.fire({
-                        title: 'Halo!',
-                        text: 'Ini adalah pop-up dari SweetAlert2.',
-                        icon: 'success',
-                        confirmButtonText: 'OK'
-                    });
-                }
-            </script>
-        @endpush
     @endsection

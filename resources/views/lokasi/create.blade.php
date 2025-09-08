@@ -13,26 +13,29 @@
         </div>
         <div class="card">
             <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <div class="fs-2">Tambah data</div>
-                    </div>
-                    <div class="col">
-                        <div class="text-end">
-                            <a href="/lokasi"><button type="button" class="btn btn-success">Kirim</button></a>
+                <form action="/lokasi/create" method="post">
+                    @csrf
+                    <div class="row">
+                        <div class="col">
+                            <div class="fs-2">Tambah data</div>
+                        </div>
+                        <div class="col">
+                            <div class="text-end">
+                                <button type="submit" class="btn btn-success">Kirim</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="mt-3">Lokasi</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Lokasi..." aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
-                <div class="mt-1">Deskripsi</div>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Deskripsi..." aria-label="Username"
-                        aria-describedby="basic-addon1">
-                </div>
+                    <div class="mt-3">Lokasi</div>
+                    <div class="input-group">
+                        <input name="lokasi" type="text" class="form-control" placeholder="Lokasi..." aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="mt-1">Deskripsi</div>
+                    <div class="input-group">
+                        <input name="deskripsi" type="text" class="form-control" placeholder="Deskripsi..." aria-label="Username"
+                            aria-describedby="basic-addon1">
+                    </div>
+                </form>
             </div>
         </div>
     </div>
