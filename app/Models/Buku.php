@@ -11,4 +11,8 @@ class Buku extends Model
     protected $guarded = ['id'];
 
     public $timestamps = false;
+
+    public function lokasi() {
+        return $this->belongsTo(Lokasi::class, 'id_lokasi');
+    }
 }

@@ -11,6 +11,7 @@
                         <th>Pengarang</th>
                         <th>Penerbit</th>
                         <th>Tahun terbit</th>
+                        <th>Lokasi</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -22,6 +23,7 @@
                             <td>{{ $item->pengarang }}</td>
                             <td>{{ $item->penerbit }}</td>
                             <td>{{ $item->tahun_terbit }}</td>
+                            <td>{{ $item->lokasiBuku }}</td>
                             <td>
                                 <div class="row">
                                     <div class="col">

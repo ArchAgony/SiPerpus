@@ -33,10 +33,10 @@
                             <td>{{ $item->penerbit }}</td>
                             <td>{{ $item->tahun_terbit }}</td>
                             <td>
-                                @if (!empty($item->lokasi))
-                                    {{ $item->lokasi }}
+                                @if ($item->id_lokasi == null)
+                                    -
                                 @else
-                                    tidak ada data
+                                    {{ $item->id_lokasi }}
                                 @endif
                             </td>
                             <td>
